@@ -29,8 +29,8 @@ import {
   Settings,
   Rocket,
   Check,
-  Instagram,
-  Linkedin,
+  Star,
+  Link2,
 } from "lucide-react";
 
 /* ── Site Info ────────────────────────────────────────── */
@@ -475,8 +475,8 @@ export const FOOTER_LINKS = {
     { label: "Compliance LGPD", href: "#" },
   ],
   social: [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Star, href: "#", label: "Instagram" },
+    { icon: Link2, href: "#", label: "LinkedIn" },
     { icon: MessageCircle, href: SITE.whatsapp, label: "WhatsApp" },
   ],
 } as const;
