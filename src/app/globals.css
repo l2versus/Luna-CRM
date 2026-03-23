@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ============================================================
+   LUNA CRM — Design System
+   Nicho: Clínicas de Estética Corporal e Harmonização Facial
+   Padrão: Silicon Valley Tier 1 (Linear, Vercel, Stripe)
+   ============================================================ */
+
+:root {
+  /* Core */
+  --luna-bg: #0A0A0B;
+  --luna-surface: #111114;
+  --luna-surface-2: #1A1A1F;
+  --luna-surface-3: #222228;
+  --luna-border: #2A2A32;
+  --luna-border-subtle: #1E1E25;
+
+  /* Brand */
+  --luna-gold: #D4AF37;
+  --luna-gold-subtle: rgba(212, 175, 55, 0.12);
+  --luna-gold-hover: #E5C04A;
+
+  /* Text */
+  --luna-text: #F0EDE8;
+  --luna-text-muted: #8B8A94;
+  --luna-text-dim: #5A5A66;
+
+  /* Status — Leads */
+  --luna-hot: #FF6B4A;
+  --luna-warm: #F0A500;
+  --luna-cold: #4A7BFF;
+  --luna-won: #2ECC8A;
+  --luna-lost: #FF4757;
+
+  /* Status — System */
+  --luna-success: #2ECC8A;
+  --luna-warning: #F0A500;
+  --luna-error: #FF4757;
+  --luna-info: #4A7BFF;
+
+  /* Radar de Retenção Biológico */
+  --luna-retention-safe: #2ECC8A;
+  --luna-retention-watch: #F0A500;
+  --luna-retention-risk: #FF6B4A;
+  --luna-retention-critical: #FF4757;
+  --luna-retention-churn: #8B0000;
+
+  /* Spacing */
+  --luna-radius-sm: 6px;
+  --luna-radius-md: 8px;
+  --luna-radius-lg: 12px;
+  --luna-radius-xl: 16px;
+
+  /* Shadows */
+  --luna-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --luna-shadow-hover: 0 25px 50px rgba(0, 0, 0, 0.45);
+  --luna-shadow-gold: 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+/* Base */
+body {
+  background: var(--luna-bg);
+  color: var(--luna-text);
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings — Cormorant Garamond */
+h1, h2, h3, .font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--luna-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--luna-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--luna-text-dim);
+}
+
+/* Selection */
+::selection {
+  background: var(--luna-gold-subtle);
+  color: var(--luna-gold);
+}
