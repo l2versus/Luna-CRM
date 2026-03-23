@@ -49,3 +49,4 @@ prisma/migrations/
 # Landing page source (already integrated into src/)
 Site Luna CRM/
 public/videos/
+.claude/worktrees/

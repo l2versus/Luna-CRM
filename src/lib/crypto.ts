@@ -1,9 +1,15 @@
 import { createCipheriv, createDecipheriv, randomBytes } from 'crypto'
 
 const ALGORITHM = 'aes-256-gcm'
-const KEY = Buffer.from(process.env.ENCRYPTION_KEY!, 'hex')
+
+function getKey(): Buffer {
+  const key = process.env.ENCRYPTION_KEY
+  if (!key) throw new Error('ENCRYPTION_KEY env var is required')
+  return Buffer.from(key, 'hex')
+}
 
 export function encryptCredentials(data: Record<string, unknown>): string {
+  const KEY = getKey()
   const iv = randomBytes(16)
   const cipher = createCipheriv(ALGORITHM, KEY, iv)
   const json = JSON.stringify(data)
@@ -19,6 +25,7 @@ export function encryptCredentials(data: Record<string, unknown>): string {
 export function decryptCredentials(
   ciphertext: string
 ): Record<string, unknown> {
+  const KEY = getKey()
   const [ivHex, authTagHex, dataHex] = ciphertext.split(':')
   const decipher = createDecipheriv(
     ALGORITHM,
