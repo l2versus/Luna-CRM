@@ -287,12 +287,15 @@ Estado vazio: Ilustração contextual
 [✅] Schema Prisma multi-tenant (45+ models)
 [✅] Design system (CSS vars, fontes, globals.css)
 [✅] SAAS-SCOPE.md com escopo completo
-[ ] Libs core (prisma.ts, auth.ts, tenant-context.ts)
-[ ] Middleware de autenticação + tenant
-[ ] Seeds (planos, ciclos de retenção, tenant demo)
-[ ] Luna HQ — Dashboard master
-[ ] Luna HQ — Provisioning de tenant
-[ ] CRM — Pipeline Kanban
+[✅] Libs core (prisma.ts, auth.ts, tenant-context.ts, plan-limits.ts, crypto.ts, audit.ts, retention-radar.ts)
+[✅] Middleware de autenticação + tenant
+[✅] Seeds (planos, ciclos de retenção, tenant demo)
+[✅] Auth API (login, register, me) + Login page + Auth store
+[✅] Luna HQ — Layout + Dashboard master (KPIs, MRR, recent tenants)
+[✅] Luna HQ — Provisioning de tenant (CRUD + create modal)
+[✅] CRM — Layout + Navegação (sidebar, 7 nav items)
+[✅] CRM — Pipeline Kanban (drag & drop, optimistic, server action)
+[✅] CRM — API routes (leads POST, pipeline GET, HQ stats/tenants)
 [ ] CRM — Inbox WhatsApp
 [ ] CRM — Radar de Retenção Biológico
 [ ] CRM — IA Cascade

@@ -20,6 +20,7 @@ const PUBLIC_PREFIXES = [
   '/convite/',
   '/demo',
   '/landing',
+  '/login',
   '/_next',
   '/favicon',
 ]
@@ -59,7 +60,7 @@ export function middleware(request: NextRequest) {
       )
     }
     // Página: redireciona para login
-    const loginUrl = new URL('/api/auth/login', request.url)
+    const loginUrl = new URL('/login', request.url)
     loginUrl.searchParams.set('redirect', pathname)
     return NextResponse.redirect(loginUrl)
   }
